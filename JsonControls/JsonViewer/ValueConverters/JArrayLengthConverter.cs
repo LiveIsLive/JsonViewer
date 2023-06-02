@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Data;
 using Newtonsoft.Json.Linq;
 
-namespace JsonControls.JsonViewer.ValueConverters
+namespace JsonControls.ValueConverters
 {
     public sealed class JArrayLengthConverter : IValueConverter
     {

@@ -7,7 +7,7 @@ using System.Windows.Input;
 using System.Windows.Threading;
 using Newtonsoft.Json.Linq;
 
-namespace JsonControls.JsonViewer
+namespace JsonControls
 {
     /// <summary>
     /// Interaction logic for JsonViewer.xaml

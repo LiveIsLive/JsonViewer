@@ -4,7 +4,7 @@ using System.Windows.Data;
 using System.Windows.Media;
 using Newtonsoft.Json.Linq;
 
-namespace JsonControls.JsonViewer.ValueConverters
+namespace JsonControls.ValueConverters
 {
     public sealed class JPropertyTypeToColorConverter : IValueConverter
     {

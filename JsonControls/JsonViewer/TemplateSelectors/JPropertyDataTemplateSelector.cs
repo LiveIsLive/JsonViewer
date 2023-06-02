@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using Newtonsoft.Json.Linq;
 
-namespace JsonControls.JsonViewer.TemplateSelectors
+namespace JsonControls.TemplateSelectors
 {
     public sealed class JPropertyDataTemplateSelector : DataTemplateSelector
     {

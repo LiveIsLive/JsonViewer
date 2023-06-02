@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Data;
 using Newtonsoft.Json.Linq;
 
-namespace JsonControls.JsonViewer.ValueConverters
+namespace JsonControls.ValueConverters
 {
     // This converter is only used by JProperty tokens whose Value is Array/Object
     class ComplexPropertyMethodToValueConverter : IValueConverter

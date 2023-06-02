@@ -45,7 +45,7 @@ namespace JsonViewerDemo
                 //client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/photos"));
                 //client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/todos"));
                 //client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/users"));
-                client.DownloadStringAsync(new Uri("https://localhost:44300/JJISDatalinksApi/datalinks/all"));
+                client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/users"));
             }
             catch (Exception ex)
             {
