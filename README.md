@@ -1,6 +1,6 @@
 
 
-This is a wpf control to display json data.
+This is a wpf control for displaying json data.
 
 It is forked from：https://githu.com/catsgotmytongue/JsonControls-WPF/
 
