@@ -1,31 +1,22 @@
-![iycP48R.png](https://bitbucket.org/repo/a6q8Xk/images/612256289-iycP48R.png)
 
-# README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a wpf control to display json data.
 
-### What is this repository for? ###
+It is forked from：https://githu.com/catsgotmytongue/JsonControls-WPF/
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+How to Use？
 
-### How do I get set up? ###
+First, add the package reference：
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+dotnet add package JsonControls.JsonViewer
 
-### Contribution guidelines ###
+And just set the json string to the "Json" property. For examlple：
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+```xml
+	<Window x:Class="JsonViewerDemo.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:jsonViewer="clr-namespace:JsonControls;assembly=JsonControls">
+	<jsonViewer:JsonViewer x:Name="JsonViewer" DockPanel.Dock="Bottom" Json="[1,2,3]" />
+  </Window>
+```
