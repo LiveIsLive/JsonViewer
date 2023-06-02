@@ -22,10 +22,33 @@ namespace JsonControls
             InitializeComponent();
         }
 
-        public void Load(string json)
-        {
+
+
+		public string Json
+		{
+			get { return (string)GetValue(JsonProperty); }
+			set { SetValue(JsonProperty, value); }
+		}
+
+		// Using a DependencyProperty as the backing store for Json.  This enables animation, styling, binding, etc...
+		public static readonly DependencyProperty JsonProperty =
+			DependencyProperty.Register("Json", typeof(string), typeof(JsonViewer), new PropertyMetadata(null, JsonChanged));
+
+        public static void JsonChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+		{
+            JsonViewer me = (JsonViewer)d;
+            TreeView JsonTreeView = ((JsonViewer)d).JsonTreeView;
+
             JsonTreeView.ItemsSource = null;
             JsonTreeView.Items.Clear();
+            me.Error = null;
+
+            string json = me.Json;
+            if (string.IsNullOrWhiteSpace(json))
+			{
+                me.Error = "";
+                return;
+			}
 
             var children = new List<JToken>();
 
@@ -42,11 +65,25 @@ namespace JsonControls
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Could not open the JSON string:\r\n" + ex.Message);
+                me.Error="Could not open the JSON string:\r\n" + ex.Message;
             }
-        }
+		}
 
-        private void JValue_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+
+		public string Error
+		{
+			get { return (string)GetValue(ErrorProperty); }
+			protected set { SetValue(ErrorProperty, value); }
+		}
+
+		// Using a DependencyProperty as the backing store for Error.  This enables animation, styling, binding, etc...
+		public static readonly DependencyProperty ErrorProperty =
+			DependencyProperty.Register("Error", typeof(string), typeof(JsonViewer), new PropertyMetadata(null));
+
+
+
+		private void JValue_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ClickCount != 2) 
                 return;
