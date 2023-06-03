@@ -16,6 +16,10 @@
     <Company>ColdShine Soft</Company>
     <Product>JsonViewer</Product>
     <PackageProjectUrl>https://github.com/LiveIsLive/JsonViewer</PackageProjectUrl>
+    <Description>This is a WPF TreeView control for displaying json or xml data.</Description>
+    <Version>1.1</Version>
+    <AssemblyVersion>1.1</AssemblyVersion>
+    <FileVersion>1.1</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

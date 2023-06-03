@@ -33,8 +33,9 @@ namespace JsonViewerDemo
 				var client = new WebClient {Proxy = null};
 				client.DownloadStringCompleted += delegate(object sender, DownloadStringCompletedEventArgs args)
 				{
-					JsonViewer.Json = args.Result;
-					//JsonViewer.Json="{a=1}";
+					//JsonViewer.Data = args.Result;
+					//JsonViewer.DataType = JsonControls.DataType.Xml; ;
+					//JsonViewer.Data = "<r>1</r>";
 					TextBlock.Text = "Loading finished";
 				};
 				TextBlock.Text = "Loading...";
@@ -52,7 +53,7 @@ namespace JsonViewerDemo
 			{
 				Debug.WriteLine(ex.Message);
 				const string json = "{\"one\": \"two\",\"key\": \"value\"}";
-				JsonViewer.Json=json;
+				JsonViewer.Data=json;
 			}
 		}
 	}

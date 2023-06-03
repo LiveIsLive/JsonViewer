@@ -5,6 +5,7 @@
         Title="MainWindow" Height="350" Width="525">
 	<DockPanel>
 		<TextBlock Name="TextBlock" DockPanel.Dock="Top"></TextBlock>
-		<jsonViewer:JsonViewer x:Name="JsonViewer" DockPanel.Dock="Bottom" />
+		<!--<jsonViewer:JsonViewer x:Name="JsonViewer" DockPanel.Dock="Bottom" DataType="Xml" Data="&lt;r&gt;1&lt;/r&gt;" />-->
+		<jsonViewer:JsonViewer x:Name="JsonViewer" DockPanel.Dock="Bottom" Data="[1,2,3]" />
 	</DockPanel>
 </Window>
